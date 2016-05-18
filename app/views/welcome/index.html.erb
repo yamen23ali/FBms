@@ -1,0 +1,26 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1188639221176469',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<div class="fb-send-to-messenger" 
+  messenger_app_id="1188639221176469" 
+  page_id="1692816774306401" 
+  data-ref="custId:orderNum" 
+  color="blue" 
+  size="standard"></div>
