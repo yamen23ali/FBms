@@ -14,10 +14,25 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+  
+  function changeCustomerNumber(){
+    var customerNumber = document.getElementById('customerNumber').value;
+    var fbPlugin = document.getElementById('fbplugin');
+    
+    fbPlugin.setAttribute('data-ref', customerNumber);
+
+    var query = fbPlugin.getAttribute('fb-iframe-plugin-query');
+    var query = query.replace("ref", "oldRef");
+    query +=  "&ref=" + customerNumber;
+
+    fbPlugin.setAttribute('fb-iframe-plugin-query', query);
+
+  }
 </script>
 
 <input type="text" value="customer number" id="customerNumber"/>
-<button onclick="document.getElementById('fbplugin').setAttribute('data-ref', document.getElementById('customerNumber').value)">Change Customer Number</button>
+<button onclick="changeCustomerNumber();">Change Customer Number</button>
 <br/>
 <!--
 =================================================
