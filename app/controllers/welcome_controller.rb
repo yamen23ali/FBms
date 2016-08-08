@@ -16,8 +16,8 @@ class WelcomeController < ApplicationController
 
     puts sender
 
-  	response = HTTParty.post('https://graph.facebook.com/v2.6/me/messages?access_token=CAANwgOLMeogBANkoaDJTz8V2kBJGcwiUWaDLxEH6PYnojIIjgimDtXYdizm25qgz1UME51uYeytZBJD1j3nP9KQxm5CUDtzfNb6ZAMLJGH71iTLKKsVrmWcBj9welZBMuFaM6kyG5znAmI1iC8PRsLffUuzVlDAwZBytJyMeJep5BBZCMMH4TjuWchSBcDgn1DrqBw9PPOgZDZD',
-    :query => { recipient: { id: sender}, message: { text: "Safoo2aaa <3 <3 <3" }})
+  	response = HTTParty.post('https://graph.facebook.com/v2.6/me/messages?access_token=',
+    :query => { recipient: { id: sender}, message: { text: "Safoo" }})
 
     puts response
 

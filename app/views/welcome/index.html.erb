@@ -1,7 +1,7 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '1188639221176469',
+      appId      : <%= ENV['APP_ID']%>,
       xfbml      : true,
       version    : 'v2.6'
     });
@@ -15,12 +15,43 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 
-<div class="fb-send-to-messenger" 
-  messenger_app_id="1188639221176469" 
-  page_id="1692816774306401" 
-  data-ref="custId:orderNum" 
+<input type="text" value="customer number" id="customerNumber"/>
+<button onclick="document.getElementById('fbplugin').setAttribute('data-ref', document.getElementById('customerNumber').getAttribute('value'))">Change Customer Number</button>
+<br/>
+<!--
+=================================================
+<br/>
+Local
+<br/>
+  <div id = "fbplugin" class="fb-send-to-messenger" 
+  messenger_app_id=  <%= ENV['APP_ID']%>
+  page_id= <%= ENV['PAGE_ID']%>
+  data-ref="JoKatbMajH22kpTsyne+YZYo48bUiM6vMAs+0NukzZeUm0iYjfYdnDdS4JLDsPPR9ohGq8vnhmDITvTqP2Hk/84cATDXHf7YQw+8buZN0G+VAYParDeBDhNsDeQGHWc1ZpNsZxc0NMA=" 
   color="blue" 
   size="standard"></div>
+<br/>
+=================================================
+<br/>
+Release
+<br/>
+<div class="fb-send-to-messenger" 
+  messenger_app_id= <%= ENV['APP_ID']%>
+  page_id= <%= ENV['PAGE_ID']%>
+  data-ref="hdsfhdfh" 
+  color="blue" 
+  size="standard"></div>
+  <br/>
+  -->
+=================================================
+<br/>
+ Live
+ <br/>
+  <div class="fb-send-to-messenger" 
+  messenger_app_id= <%= ENV['APP_ID']%>
+  page_id= <%= ENV['PAGE_ID']%>
+  data-ref="JoKatbMajH22kpTsyne+YR+FZfTHU14SxLGWcsOvg6vq/uWOw131AxqWgqfD40F1MtgEfdNfY/7MwM9Mjm5xEIsK/S3X+5Se" 
+  color="blue" 
+  size="standard"></div>
+<br/>
+  =================================================
