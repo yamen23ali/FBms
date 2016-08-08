@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   def index
   	#puts params
   	#render :json => params["hub.challenge"]
+    @customerNumber = ( params["customerNumber"].nil? ? "1234" : params["customerNumber"]);
   end
 
   def test
